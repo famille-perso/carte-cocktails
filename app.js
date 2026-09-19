@@ -417,18 +417,11 @@ function openSheet(item) {
   document.getElementById("sheet-title").textContent = item.name;
   document.getElementById("sheet-tagline").textContent = item.tagline;
   document.getElementById("sheet-h3-a").textContent = isSpirit ? "Profil de dégustation" : "Ingrédients";
-  document.getElementById("sheet-h3-b").textContent = isSpirit ? "Service" : "Préparation";
   document.getElementById("sheet-badges").innerHTML =
     item.badges.map((b) => "<span>" + b + "</span>").join("") +
     "<span>⚠️ L’abus d’alcool est dangereux pour la santé</span>";
   const listA = isSpirit ? item.profile : item.ingredients;
-  const listB = isSpirit ? item.service : item.steps;
   document.getElementById("sheet-ingredients").innerHTML = listA.map((i) => "<li>" + i + "</li>").join("");
-  document.getElementById("sheet-steps").innerHTML = listB.map((s) => "<li>" + s + "</li>").join("");
-  document.getElementById("sheet-serve-block").style.display = isSpirit ? "none" : "";
-  if (!isSpirit) {
-    document.getElementById("sheet-serve").textContent = item.serve;
-  }
   backdrop.hidden = false;
   sheet.hidden = false;
   sheet.scrollTop = 0;

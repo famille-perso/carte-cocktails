@@ -98,6 +98,8 @@ h1 {
 
 /* Fiche détail */
 .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 20; }
+.backdrop[hidden] { display: none !important; }
+.sheet[hidden] { display: none !important; }
 .sheet {
   position: fixed; z-index: 21; inset: auto 0 0 0;
   background: #191410; border-top: 1px solid var(--line);

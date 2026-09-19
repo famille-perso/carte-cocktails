@@ -313,6 +313,7 @@ function openSheet(c) {
   document.getElementById("sheet-steps").innerHTML = c.steps.map((s) => "<li>" + s + "</li>").join("");
   backdrop.hidden = false;
   sheet.hidden = false;
+  sheet.scrollTop = 0;
   document.body.style.overflow = "hidden";
   document.getElementById("sheet-close").focus();
 }

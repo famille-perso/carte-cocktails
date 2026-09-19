@@ -1,80 +1,88 @@
 const COCKTAILS = [
   {
     id: "moscow-mule",
+    kind: "cocktail",
     name: "Moscow Mule",
     family: "Mule · Vodka",
-    tagline: "Frais, gingembre, ultra désaltérant. Servi en mug en cuivre.",
+    tagline: "Frais, gingembre, ultra désaltérant.",
+    short: "Vodka · Ginger beer · Citron vert",
     degree: "≈ 12° · Alcoolisé",
-    badges: ["🥒 Gingembre", "🧊 Glace pilée", "🥉 Mug cuivre"],
+    badges: ["🫚 Ginger beer", "🧊 Gros glaçons", "🍈 Citron vert"],
     art: "mule",
     bg: "linear-gradient(135deg,#3a2b18,#1a3a34 60%,#101a18)",
     ingredients: [
       "<strong>6 cl</strong> de vodka",
       "<strong>12 cl</strong> de ginger beer bien fraîche",
       "<strong>1 cl</strong> de jus de citron vert",
-      "Glace pilée + rondelle de citron vert + brin de menthe",
+      "Gros glaçons + rondelle de citron vert + brin de menthe",
     ],
     steps: [
-      "Remplissez un mug en cuivre (ou un grand verre) de glace pilée.",
+      "Remplissez le verre de gros glaçons.",
       "Versez la vodka puis le jus de citron vert.",
       "Complétez avec la ginger beer, mélangez doucement.",
       "Décorez de menthe et citron vert. Servez avec une paille.",
     ],
-    serve: "Mug en cuivre givré, sinon tumbler. Toujours très frais.",
+    serve: "Toujours servir très frais.",
   },
   {
     id: "london-mule",
+    kind: "cocktail",
     name: "London Mule",
     family: "Mule · Gin",
     tagline: "La version londonienne, plus botanique et florale.",
+    short: "Gin · Ginger beer · Citron vert",
     degree: "≈ 12° · Alcoolisé",
-    badges: ["🫚 Ginger beer", "🍋 Citron vert", "🥉 Mug cuivre"],
+    badges: ["🫚 Ginger beer", "🧊 Gros glaçons", "🌿 Menthe"],
     art: "mule",
     bg: "linear-gradient(135deg,#2e2a4a,#1d3a34 65%,#101a18)",
     ingredients: [
       "<strong>6 cl</strong> de gin London Dry",
       "<strong>12 cl</strong> de ginger beer",
       "<strong>1 cl</strong> de jus de citron vert",
-      "Glace pilée + zeste de citron + menthe",
+      "Gros glaçons + zeste de citron + menthe",
     ],
     steps: [
-      "Glace pilée dans un mug en cuivre.",
+      "Remplissez le verre de gros glaçons.",
       "Ajoutez le gin et le citron vert.",
       "Allongez de ginger beer, remuez une fois.",
       "Zeste de citron exprimé au-dessus + menthe.",
     ],
-    serve: "Mug cuivre ou verre ballon. Rondelle de concombre en option.",
+    serve: "Servir très frais. Rondelle de concombre en option.",
   },
   {
     id: "caribbean-mule",
+    kind: "cocktail",
     name: "Caribbean Mule",
     family: "Mule · Rhum",
     tagline: "Soleil des îles : rhum ambré, citron vert et gingembre.",
+    short: "Rhum ambré · Ginger beer · Citron vert",
     degree: "≈ 12° · Alcoolisé",
-    badges: ["🏝️ Rhum", "🫚 Gingembre", "🍈 Citron vert"],
+    badges: ["🏝️ Rhum ambré", "🫚 Gingembre", "🧊 Gros glaçons"],
     art: "mule",
     bg: "linear-gradient(135deg,#4a2a14,#1d4a3a 60%,#0f1f1a)",
     ingredients: [
       "<strong>6 cl</strong> de rhum ambré",
       "<strong>12 cl</strong> de ginger beer",
       "<strong>2 cl</strong> de jus de citron vert",
-      "Glace pilée + menthe + tranche d’ananas (option)",
+      "Gros glaçons + menthe + tranche d’ananas (option)",
     ],
     steps: [
-      "Remplissez le mug de glace pilée.",
-      "Versez rhum et citron vert.",
+      "Remplissez le verre de gros glaçons.",
+      "Versez le rhum et le citron vert.",
       "Complétez de ginger beer.",
       "Décorez menthe + ananas pour le côté caribéen.",
     ],
-    serve: "Mug cuivre, paille large. Sucre de canne en bordure si envie.",
+    serve: "Paille large. Sucre de canne en bordure si envie.",
   },
   {
     id: "cuba-libre",
+    kind: "cocktail",
     name: "Cuba Libre",
     family: "Classique · Rhum & Cola",
     tagline: "L’original de 1900 : rhum, cola et beaucoup de citron vert.",
+    short: "Rhum · Cola · Citron vert",
     degree: "≈ 10° · Alcoolisé",
-    badges: ["🥤 Cola", "🍈 Double citron vert", "🧊 Gros glaçons"],
+    badges: ["🥤 Cola", "🍈 Citron vert", "🧊 Gros glaçons"],
     art: "cola",
     bg: "linear-gradient(135deg,#3d1712,#1e1410 65%,#0f0d0a)",
     ingredients: [
@@ -84,43 +92,47 @@ const COCKTAILS = [
       "2 quartiers de citron vert + gros glaçons",
     ],
     steps: [
-      "Remplissez un verre highball de gros glaçons.",
+      "Remplissez un grand verre de gros glaçons.",
       "Pressez les quartiers de citron vert, déposez-les dans le verre.",
       "Versez le rhum puis le cola bien frais.",
       "Mélangez délicatement une fois. Servez aussitôt.",
     ],
-    serve: "Verre highball. Cola versé en dernier pour garder les bulles.",
+    serve: "Cola versé en dernier pour garder les bulles.",
   },
   {
     id: "mojito",
+    kind: "cocktail",
     name: "Mojito",
     family: "Classique · Menthe",
     tagline: "Le préféré des terrasses : menthe pilée, rhum, bulles.",
+    short: "Rhum blanc · Menthe · Citron vert · Eau gazeuse",
     degree: "≈ 10° · Alcoolisé",
-    badges: ["🌿 Menthe fraîche", "🍈 Citron vert", "🫧 Eau gazeuse"],
+    badges: ["🌿 Menthe fraîche", "🍈 Citron vert", "🧊 Gros glaçons"],
     art: "mojito",
     bg: "linear-gradient(135deg,#1e4a2e,#123324 60%,#0c1a12)",
     ingredients: [
       "<strong>5 cl</strong> de rhum blanc",
       "<strong>3 cl</strong> de jus de citron vert",
       "<strong>2 c. à café</strong> de sucre de canne",
-      "8 feuilles de menthe + eau gazeuse + glace pilée",
+      "8 feuilles de menthe + eau gazeuse + gros glaçons",
     ],
     steps: [
       "Pilez doucement menthe + sucre + citron vert (sans déchirer la menthe).",
-      "Ajoutez le rhum, remplissez de glace pilée aux 3/4.",
+      "Ajoutez le rhum, remplissez de gros glaçons aux 3/4.",
       "Complétez d’eau gazeuse, mélangez de bas en haut.",
-      "Couronnez de glace pilée + tête de menthe tapée.",
+      "Couronnez de gros glaçons + tête de menthe tapée.",
     ],
-    serve: "Verre highball, 2 pailles courtes. Ne mixez jamais la menthe au shaker.",
+    serve: "2 pailles courtes. Ne mixez jamais la menthe au shaker.",
   },
   {
     id: "aperol-spritz",
+    kind: "cocktail",
     name: "Aperol Spritz",
     family: "Spritz · Italie",
     tagline: "Orange amer iconique de Venise. 3-2-1, inratable.",
+    short: "Prosecco · Aperol · Eau gazeuse · Orange",
     degree: "≈ 8° · Alcoolisé",
-    badges: ["🍊 Aperol", "🍾 Prosecco", "🫧 Bulles"],
+    badges: ["🍊 Aperol", "🍾 Prosecco", "🧊 Gros glaçons"],
     art: "spritz",
     bg: "linear-gradient(135deg,#6b2a10,#a34d16 55%,#2a1508)",
     ingredients: [
@@ -130,20 +142,22 @@ const COCKTAILS = [
       "Gros glaçons + 1/2 rondelle d’orange",
     ],
     steps: [
-      "Remplissez un grand verre à vin de gros glaçons.",
-      "Versez prosecco, puis Aperol, puis eau gazeuse.",
+      "Remplissez un grand verre de gros glaçons.",
+      "Versez le prosecco, puis l’Aperol, puis l’eau gazeuse.",
       "Un demi-tour de cuillère, pas plus.",
       "Glissez la rondelle d’orange. Servez aussitôt.",
     ],
-    serve: "Verre à spritz / ballon. Ratio mémo : 3 volumes prosecco, 2 Aperol, 1 gazeuse.",
+    serve: "Ratio mémo : 3 volumes prosecco, 2 Aperol, 1 gazeuse.",
   },
   {
     id: "hugo-spritz",
+    kind: "cocktail",
     name: "Hugo Spritz",
     family: "Spritz · Sureau",
     tagline: "Floral et léger : sureau, menthe et prosecco.",
+    short: "Prosecco · Sureau · Eau gazeuse · Menthe",
     degree: "≈ 7° · Alcoolisé",
-    badges: ["🌸 Sureau", "🌿 Menthe", "🍾 Prosecco"],
+    badges: ["🌸 Sureau", "🌿 Menthe", "🧊 Gros glaçons"],
     art: "hugo",
     bg: "linear-gradient(135deg,#2a4a2e,#7aa06a 60%,#1a2a1e)",
     ingredients: [
@@ -153,18 +167,20 @@ const COCKTAILS = [
       "Menthe + citron vert + gros glaçons",
     ],
     steps: [
-      "Menthe légèrement tapée au fond du verre à vin + glaçons.",
-      "Versez sirop de sureau puis prosecco.",
+      "Menthe légèrement tapée au fond du verre + gros glaçons.",
+      "Versez le sirop de sureau puis le prosecco.",
       "Allongez d’eau gazeuse, mélangez doucement.",
       "Ajoutez un quartier de citron vert.",
     ],
-    serve: "Verre à vin large. Très frais, parfait en apéritif d’été.",
+    serve: "Très frais, parfait en apéritif d’été.",
   },
   {
     id: "vodka-martini",
+    kind: "cocktail",
     name: "Vodka Martini « James Bond »",
     family: "Martini · Shaken, not stirred",
     tagline: "La commande de 007 : vodka glacée, pointe de vermouth.",
+    short: "Vodka · Vermouth dry · Olive ou citron",
     degree: "≈ 25° · Fort",
     badges: ["🍸 Shaker", "🫒 Olive / twist", "❄️ Très froid"],
     art: "martini",
@@ -172,24 +188,26 @@ const COCKTAILS = [
     ingredients: [
       "<strong>6 cl</strong> de vodka (glacée idéalement)",
       "<strong>1 cl</strong> de vermouth dry",
-      "Glaçons + zeste de citron ou 1 olive verte",
+      "Gros glaçons + zeste de citron ou 1 olive verte",
       "Version cinéma : 3 doses gin + 1 vodka + 1/2 Lillet",
     ],
     steps: [
-      "Rafraîchissez un verre à martini au congélateur.",
+      "Rafraîchissez le verre au congélateur.",
       "Au shaker rempli de glace : vodka + vermouth.",
       "Shakez 10 secondes bien franchement — comme Bond.",
       "Filtrez dans le verre glacé, zeste ou olive.",
     ],
-    serve: "Verre à martini givré, sans glace. À siroter lentement.",
+    serve: "Servir givré, sans glace. À siroter lentement.",
   },
   {
     id: "gin-tonic",
+    kind: "cocktail",
     name: "Gin Tonic",
     family: "Classique · Gin",
     tagline: "Simple et parfait quand gin et tonic sont glacés.",
+    short: "Gin · Tonic · Citron",
     degree: "≈ 9° · Alcoolisé",
-    badges: ["🫏 Genévrier", "🫧 Tonic premium", "🍋 Garnish"],
+    badges: ["🫏 Genévrier", "🫧 Tonic premium", "🧊 Gros glaçons"],
     art: "gintonic",
     bg: "linear-gradient(135deg,#1e3a4a,#2a5a6a 60%,#0e1e26)",
     ingredients: [
@@ -199,12 +217,59 @@ const COCKTAILS = [
       "Option : baie de genièvre, poivre rose",
     ],
     steps: [
-      "Remplissez un verre ballon de gros glaçons.",
+      "Remplissez un grand verre de gros glaçons.",
       "Versez le gin, remuez pour rafraîchir.",
       "Versez le tonic doucement le long du verre.",
       "Exprimez le zeste, déposez le garnish.",
     ],
-    serve: "Verre ballon ou copa. Tonic toujours décapsulé minute.",
+    serve: "Tonic toujours décapsulé minute.",
+  },
+];
+
+const SPIRITS = [
+  {
+    id: "flor-de-cana-12",
+    kind: "spirit",
+    name: "Flor de Caña 12 ans",
+    family: "Rhum · Nicaragua",
+    tagline: "Rhum ambré vieilli 12 ans, doux, boisé et généreux.",
+    short: "Rhum ambré · Nicaragua · 12 ans",
+    degree: "40°",
+    badges: ["🇳🇮 Nicaragua", "🛢️ 12 ans en fût", "🌱 Distillerie durable"],
+    art: "bottle",
+    bg: "linear-gradient(135deg,#4a2a10,#7a4d16 55%,#241505)",
+    profile: [
+      "<strong>Nez :</strong> vanille, caramel, fruits secs et miel",
+      "<strong>Bouche :</strong> ronde et boisée, cacao, canne à sucre",
+      "<strong>Finale :</strong> longue, douce, légèrement épicée",
+    ],
+    service: [
+      "Se déguste sec, à température ambiante.",
+      "Avec 2 gros glaçons pour l’ouvrir en douceur.",
+      "Magnifique en digestif, ou en base d’un vieux rhum arrangé.",
+    ],
+  },
+  {
+    id: "bear-brother-2b",
+    kind: "spirit",
+    name: "Bear Brother 2B",
+    family: "Spiritueux · Fiche à compléter",
+    tagline: "La fiche de dégustation arrive — dis-moi en plus !",
+    short: "Spiritueux · fiche à compléter",
+    degree: "—",
+    badges: ["📝 Fiche à compléter"],
+    art: "bottle",
+    bg: "linear-gradient(135deg,#2a2a3a,#4a4a5a 60%,#14141c)",
+    profile: [
+      "<strong>Type :</strong> à préciser (whisky, rhum, autre ?)",
+      "<strong>Origine :</strong> à préciser",
+      "<strong>Dégustation :</strong> on la complète ensemble",
+    ],
+    service: [
+      "Envoie-moi le type, l’âge et le degré.",
+      "Et comment tu le sers : sec, glaçons, cocktail ?",
+      "Je mets la fiche à jour aussitôt.",
+    ],
   },
 ];
 
@@ -269,6 +334,16 @@ const ART = {
     <circle cx="126" cy="70" r="14" fill="#d8f0c0" stroke="#5a8a4a" stroke-width="3"/>
     <path d="M84 66c5-7 14-8 20-3" stroke="#3a7a4a" stroke-width="5" stroke-linecap="round"/>
   </svg>`,
+  bottle: `<svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+    <ellipse cx="100" cy="172" rx="42" ry="8" fill="black" opacity=".35"/>
+    <rect x="90" y="18" width="20" height="26" rx="4" fill="#3a2e1e" stroke="#e8b34b" stroke-width="3"/>
+    <rect x="94" y="10" width="12" height="12" rx="3" fill="#e8b34b"/>
+    <path d="M90 44c0 10-16 16-16 32v72a14 14 0 0 0 14 14h24a14 14 0 0 0 14-14V76c0-16-16-22-16-32H90z" fill="#2e1f10" stroke="#e8b34b" stroke-width="4"/>
+    <path d="M76 96h48v52H76z" fill="#7a3d10"/>
+    <path d="M76 96h48v14H76z" fill="#a35a1e"/>
+    <rect x="84" y="118" width="32" height="22" rx="3" fill="#f6efe2"/>
+    <path d="M88 124h24M88 129h24M88 134h16" stroke="#7a4d16" stroke-width="2" stroke-linecap="round"/>
+  </svg>`,
 };
 
 function artFor(c) {
@@ -276,41 +351,84 @@ function artFor(c) {
 }
 
 const grid = document.getElementById("grid");
+const gridSpirits = document.getElementById("grid-spirits");
 const pill = document.getElementById("count-pill");
+const pageTitle = document.getElementById("page-title");
+const introText = document.getElementById("intro-text");
+const tabCocktails = document.getElementById("tab-cocktails");
+const tabSpiritueux = document.getElementById("tab-spiritueux");
 const backdrop = document.getElementById("sheet-backdrop");
 const sheet = document.getElementById("sheet");
 
+function cardHtml(c, ctaLabel) {
+  return (
+    '<div class="card-art" style="background:' + c.bg + '">' + artFor(c) + "</div>" +
+    '<div class="card-body">' +
+    '<p class="card-family">' + c.family + "</p>" +
+    "<h2>" + c.name + "</h2>" +
+    "<p>" + c.short + "</p>" +
+    '<div class="card-foot"><span class="degree">' + c.degree + '</span><span class="cta">' + ctaLabel + "</span></div>" +
+    "</div>"
+  );
+}
+
 function renderCards() {
-  pill.textContent = COCKTAILS.length + " recettes";
   grid.innerHTML = "";
   COCKTAILS.forEach((c) => {
     const btn = document.createElement("button");
     btn.className = "card";
     btn.setAttribute("aria-label", "Voir " + c.name);
-    btn.innerHTML =
-      '<div class="card-art" style="background:' + c.bg + '">' + artFor(c) + "</div>" +
-      '<div class="card-body">' +
-      '<p class="card-family">' + c.family + "</p>" +
-      "<h2>" + c.name + "</h2>" +
-      "<p>" + c.tagline + "</p>" +
-      '<div class="card-foot"><span class="degree">' + c.degree + '</span><span class="cta">Voir →</span></div>' +
-      "</div>";
+    btn.innerHTML = cardHtml(c, "Voir →");
     btn.addEventListener("click", () => openSheet(c));
     grid.appendChild(btn);
   });
+  gridSpirits.innerHTML = "";
+  SPIRITS.forEach((s) => {
+    const btn = document.createElement("button");
+    btn.className = "card";
+    btn.setAttribute("aria-label", "Voir " + s.name);
+    btn.innerHTML = cardHtml(s, "Voir →");
+    btn.addEventListener("click", () => openSheet(s));
+    gridSpirits.appendChild(btn);
+  });
 }
 
-function openSheet(c) {
-  document.getElementById("sheet-art").style.background = c.bg;
-  document.getElementById("sheet-art").innerHTML = artFor(c);
-  document.getElementById("sheet-family").textContent = c.family;
-  document.getElementById("sheet-title").textContent = c.name;
-  document.getElementById("sheet-tagline").textContent = c.tagline;
-  document.getElementById("sheet-serve").textContent = c.serve;
-  document.getElementById("sheet-badges").innerHTML = c.badges.map((b) => "<span>" + b + "</span>").join("") +
+function showTab(which) {
+  const isCocktails = which === "cocktails";
+  grid.hidden = !isCocktails;
+  gridSpirits.hidden = isCocktails;
+  tabCocktails.classList.toggle("active", isCocktails);
+  tabSpiritueux.classList.toggle("active", !isCocktails);
+  tabCocktails.setAttribute("aria-selected", String(isCocktails));
+  tabSpiritueux.setAttribute("aria-selected", String(!isCocktails));
+  pageTitle.textContent = isCocktails ? "Cocktails de Cams" : "Spiritueux de Cams";
+  pill.textContent = isCocktails ? COCKTAILS.length + " cocktails" : SPIRITS.length + " spiritueux";
+  introText.textContent = isCocktails
+    ? "Touchez une carte pour voir la recette complète, les doses et le pas-à-pas en grand format."
+    : "Touchez une bouteille pour voir la fiche de dégustation et les conseils de service.";
+  window.scrollTo({ top: 0 });
+}
+
+function openSheet(item) {
+  const isSpirit = item.kind === "spirit";
+  document.getElementById("sheet-art").style.background = item.bg;
+  document.getElementById("sheet-art").innerHTML = artFor(item);
+  document.getElementById("sheet-family").textContent = item.family;
+  document.getElementById("sheet-title").textContent = item.name;
+  document.getElementById("sheet-tagline").textContent = item.tagline;
+  document.getElementById("sheet-h3-a").textContent = isSpirit ? "Profil de dégustation" : "Ingrédients";
+  document.getElementById("sheet-h3-b").textContent = isSpirit ? "Service" : "Préparation";
+  document.getElementById("sheet-badges").innerHTML =
+    item.badges.map((b) => "<span>" + b + "</span>").join("") +
     "<span>⚠️ L’abus d’alcool est dangereux pour la santé</span>";
-  document.getElementById("sheet-ingredients").innerHTML = c.ingredients.map((i) => "<li>" + i + "</li>").join("");
-  document.getElementById("sheet-steps").innerHTML = c.steps.map((s) => "<li>" + s + "</li>").join("");
+  const listA = isSpirit ? item.profile : item.ingredients;
+  const listB = isSpirit ? item.service : item.steps;
+  document.getElementById("sheet-ingredients").innerHTML = listA.map((i) => "<li>" + i + "</li>").join("");
+  document.getElementById("sheet-steps").innerHTML = listB.map((s) => "<li>" + s + "</li>").join("");
+  document.getElementById("sheet-serve-block").style.display = isSpirit ? "none" : "";
+  if (!isSpirit) {
+    document.getElementById("sheet-serve").textContent = item.serve;
+  }
   backdrop.hidden = false;
   sheet.hidden = false;
   sheet.scrollTop = 0;
@@ -324,6 +442,8 @@ function closeSheet() {
   document.body.style.overflow = "";
 }
 
+tabCocktails.addEventListener("click", () => showTab("cocktails"));
+tabSpiritueux.addEventListener("click", () => showTab("spiritueux"));
 document.getElementById("sheet-close").addEventListener("click", closeSheet);
 backdrop.addEventListener("click", closeSheet);
 document.addEventListener("keydown", (e) => {
@@ -331,3 +451,4 @@ document.addEventListener("keydown", (e) => {
 });
 
 renderCards();
+showTab("cocktails");

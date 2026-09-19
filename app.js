@@ -462,8 +462,7 @@ function openSheet(item) {
   document.getElementById("sheet-tagline").textContent = item.tagline;
   document.getElementById("sheet-h3-a").textContent = isSpirit ? "Profil de dégustation" : "Ingrédients";
   document.getElementById("sheet-badges").innerHTML =
-    item.badges.map((b) => "<span>" + b + "</span>").join("") +
-    "<span>⚠️ L’abus d’alcool est dangereux pour la santé</span>";
+    item.badges.map((b) => "<span>" + b + "</span>").join("");
   const listA = isSpirit ? item.profile : item.ingredients;
   document.getElementById("sheet-ingredients").innerHTML = listA.map((i) => "<li>" + i + "</li>").join("");
   backdrop.hidden = false;

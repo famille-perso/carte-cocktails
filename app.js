@@ -481,6 +481,32 @@ function closeSheet() {
 
 tabCocktails.addEventListener("click", () => showTab("cocktails"));
 tabSpiritueux.addEventListener("click", () => showTab("spiritueux"));
+
+const updateBtn = document.getElementById("update-btn");
+if (updateBtn && "serviceWorker" in navigator) {
+  updateBtn.addEventListener("click", async () => {
+    try {
+      updateBtn.textContent = "Recherche…";
+      const reg = await navigator.serviceWorker.getRegistration();
+      if (!reg) {
+        location.reload();
+        return;
+      }
+      await reg.update();
+      const waiter = reg.installing || reg.waiting;
+      if (waiter) {
+        waiter.postMessage({ type: "SKIP" });
+        updateBtn.textContent = "Mise à jour…";
+        setTimeout(() => location.reload(), 1500);
+      } else {
+        updateBtn.textContent = "✓ À jour";
+        setTimeout(() => { updateBtn.textContent = "↻ Mise à jour"; }, 2500);
+      }
+    } catch (e) {
+      location.reload();
+    }
+  });
+}
 document.getElementById("sheet-close").addEventListener("click", closeSheet);
 backdrop.addEventListener("click", closeSheet);
 document.addEventListener("keydown", (e) => {

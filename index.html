@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f0d0a" />
+  <meta name="description" content="Carte cocktails — appli tablette pour le bar" />
+  <title>Carte Cocktails · Bar</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 48 48" width="40" height="40" fill="none">
+          <path d="M14 6h20l-9 14v14l-2 4-2-4V20L14 6z" stroke="#e8b34b" stroke-width="2.2" stroke-linejoin="round"/>
+          <path d="M19 12h10" stroke="#e8b34b" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="32" cy="10" r="2.4" fill="#e8b34b" opacity=".9"/>
+          <circle cx="36" cy="16" r="1.6" fill="#e8b34b" opacity=".6"/>
+        </svg>
+      </div>
+      <div>
+        <p class="eyebrow">La carte · Tablette du bar</p>
+        <h1>Cocktails signature</h1>
+      </div>
+    </div>
+    <div class="topbar-meta">
+      <span class="pill" id="count-pill">9 recettes</span>
+      <span class="pill pill-gold">100% tactile</span>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="intro">
+      <p>Touchez une carte pour voir la recette complète, les doses et le pas-à-pas en grand format.</p>
+    </section>
+
+    <section id="grid" class="grid" aria-label="Liste des cocktails"></section>
+
+    <footer class="foot">
+      <p>Astuce tablette : ajoutez la page à l’écran d’accueil pour l’utiliser en plein écran, même hors-ligne.</p>
+    </footer>
+  </main>
+
+  <!-- Fiche détail plein écran -->
+  <div id="sheet-backdrop" class="backdrop" hidden></div>
+  <article id="sheet" class="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="sheet-title">
+    <div id="sheet-art" class="sheet-art"></div>
+    <div class="sheet-body">
+      <div class="sheet-head">
+        <div>
+          <p id="sheet-family" class="eyebrow"></p>
+          <h2 id="sheet-title"></h2>
+          <p id="sheet-tagline" class="tagline"></p>
+        </div>
+        <button id="sheet-close" class="btn-close" aria-label="Fermer">✕</button>
+      </div>
+      <div id="sheet-badges" class="badges"></div>
+      <div class="sheet-cols">
+        <div>
+          <h3>Ingrédients</h3>
+          <ul id="sheet-ingredients" class="ingredients"></ul>
+        </div>
+        <div>
+          <h3>Préparation</h3>
+          <ol id="sheet-steps" class="steps"></ol>
+          <div class="serve">
+            <h3>Service</h3>
+            <p id="sheet-serve"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(() => {}));
+    }
+  </script>
+</body>
+</html>

@@ -443,6 +443,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇨🇺 Cuba", "🍷 Fûts de vin rouge", "🟥 Teinte grenat"],
     art: "bottle",
+    img: "Pacto-Navio.png",
     bg: "linear-gradient(135deg,#3a1214,#7a2430 55%,#1e080a)",
     profile: [
       "<strong>Nez :</strong> floral, fruits rouges et vanille",

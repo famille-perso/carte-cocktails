@@ -237,6 +237,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇳🇮 Nicaragua", "🛢️ 12 ans en fût", "🌱 Distillerie durable"],
     art: "bottle",
+    img: "flor-de-cana-12.png",
     bg: "linear-gradient(135deg,#4a2a10,#7a4d16 55%,#241505)",
     profile: [
       "<strong>Nez :</strong> vanille, caramel, fruits secs et miel",
@@ -526,6 +527,13 @@ function artFor(c) {
   return ART[c.art] || ART.mule;
 }
 
+function artHtml(c) {
+  if (c.img) {
+    return '<img src="' + c.img + '" alt="Bouteille ' + c.name + '" loading="lazy" />';
+  }
+  return artFor(c);
+}
+
 const grid = document.getElementById("grid");
 const gridSpirits = document.getElementById("grid-spirits");
 const pill = document.getElementById("count-pill");
@@ -538,7 +546,7 @@ const sheet = document.getElementById("sheet");
 
 function cardHtml(c, ctaLabel) {
   return (
-    '<div class="card-art" style="background:' + c.bg + '">' + artFor(c) + "</div>" +
+    '<div class="card-art" style="background:' + c.bg + '">' + artHtml(c) + "</div>" +
     '<div class="card-body">' +
     '<p class="card-family">' + c.family + "</p>" +
     "<h2>" + c.name + "</h2>" +
@@ -588,7 +596,7 @@ function showTab(which) {
 function openSheet(item) {
   const isSpirit = item.kind === "spirit";
   document.getElementById("sheet-art").style.background = item.bg;
-  document.getElementById("sheet-art").innerHTML = artFor(item);
+  document.getElementById("sheet-art").innerHTML = artHtml(item);
   document.getElementById("sheet-family").textContent = item.family;
   document.getElementById("sheet-title").textContent = item.name;
   document.getElementById("sheet-tagline").textContent = item.tagline;

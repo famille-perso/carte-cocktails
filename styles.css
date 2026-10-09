@@ -101,6 +101,7 @@ h1 {
 .card:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .card-art { height: 210px; position: relative; display: grid; place-items: center; overflow: hidden; }
 .card-art svg { width: 150px; height: 150px; filter: drop-shadow(0 10px 18px rgba(0,0,0,.5)); }
+.card-art img { height: 190px; width: auto; max-width: 90%; object-fit: contain; filter: drop-shadow(0 10px 18px rgba(0,0,0,.5)); }
 .card-body { padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
 .card-family { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-soft); margin: 0; }
 .card h2 { margin: 0; font-size: 27px; line-height: 1.1; }
@@ -125,6 +126,7 @@ h1 {
 }
 .sheet-art { min-height: 260px; display: grid; place-items: center; position: relative; overflow: hidden; }
 .sheet-art svg { width: 230px; height: 230px; filter: drop-shadow(0 18px 30px rgba(0,0,0,.55)); }
+.sheet-art img { height: 300px; width: auto; max-width: 90%; object-fit: contain; filter: drop-shadow(0 18px 30px rgba(0,0,0,.55)); }
 .sheet-body { padding: 22px clamp(20px, 3vw, 36px) 34px; }
 .sheet-head { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
 .sheet-head h2 { margin: 6px 0 6px; font-size: clamp(34px, 5vw, 52px); line-height: 1; }

@@ -113,7 +113,7 @@ const COCKTAILS = [
     ingredients: [
       "<strong>5 cl</strong> de rhum blanc",
       "<strong>3 cl</strong> de jus de citron vert",
-      "<strong>2 c. à café</strong> de sucre de canne",
+      "<strong>2 cl</strong> de sirop de menthe maison",
       "8 feuilles de menthe + eau gazeuse + gros glaçons",
     ],
     steps: [
@@ -163,8 +163,7 @@ const COCKTAILS = [
     ingredients: [
       "<strong>6 cl</strong> de prosecco",
       "<strong>3 cl</strong> de sirop de fleur de sureau",
-      "<strong>4 cl</strong> d’eau gazeuse",
-      "Menthe + citron vert + gros glaçons",
+      "<strong>4 cl</strong> d’eau gazeuse"
     ],
     steps: [
       "Menthe légèrement tapée au fond du verre + gros glaçons.",
@@ -213,8 +212,8 @@ const COCKTAILS = [
     ingredients: [
       "<strong>5 cl</strong> de gin",
       "<strong>12 cl</strong> de tonic premium bien froid",
-      "Gros glaçons + zeste de citron / concombre / romarin",
-      "Option : baie de genièvre, poivre rose",
+      "Gros glaçons + zeste de citron / concombre",
+      "Option : baie de genièvre, concombre si arrivage",
     ],
     steps: [
       "Remplissez un grand verre de gros glaçons.",
@@ -588,7 +587,7 @@ function showTab(which) {
   pageTitle.textContent = isCocktails ? "Cocktails de Cams" : "Spiritueux de Cams";
   pill.textContent = isCocktails ? COCKTAILS.length + " cocktails" : SPIRITS.length + " spiritueux";
   introText.textContent = isCocktails
-    ? "Touchez une carte pour voir la recette complète, les doses et le pas-à-pas en grand format."
+    ? "Touchez une carte pour voir la recette complète et les doses en grand format."
     : "Touchez une bouteille pour voir la fiche de dégustation et les conseils de service.";
   window.scrollTo({ top: 0 });
 }

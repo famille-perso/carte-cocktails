@@ -259,6 +259,7 @@ const SPIRITS = [
     degree: "46°",
     badges: ["🇫🇷 Bio français", "🍷 Fûts de vin blanc", "🥇 Or 2023"],
     art: "bottle",
+    img: "2B-double-malt.png",
     bg: "linear-gradient(135deg,#3a2a10,#8a5a1e 55%,#241505)",
     profile: [
       "<strong>Nez :</strong> fruité, céréalier et pâtissier, très harmonieux",
@@ -281,6 +282,7 @@ const SPIRITS = [
     degree: "41°",
     badges: ["🍊 Clémentine de Corse", "🇫🇷 Bio française", "🥈 Médaille d’argent"],
     art: "bottle",
+    img: "vodka-clementina.png",
     bg: "linear-gradient(135deg,#6b3a10,#d08a2e 55%,#2a1808)",
     profile: [
       "<strong>Nez :</strong> agrumes et citron, touche de tarte au citron",
@@ -303,6 +305,7 @@ const SPIRITS = [
     degree: "41°",
     badges: ["🍋 Bergamote", "🇫🇷 Bio français", "🥇 Triple or Lyon 2026"],
     art: "bottle",
+    img: "bb9.png",
     bg: "linear-gradient(135deg,#1e3a2e,#4a7a5a 60%,#0e1e16)",
     profile: [
       "<strong>Botanicals :</strong> 9 plantes bio, bergamote et poivre Timut",
@@ -325,6 +328,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇻🇪 Venezuela", "🛢️ Jusqu’à 8 ans", "🍯 Fruits secs & vanille"],
     art: "bottle",
+    img: "diplomatico-mantuano.png",
     bg: "linear-gradient(135deg,#3d2410,#7a4d16 55%,#201204)",
     profile: [
       "<strong>Nez :</strong> fruits secs, chêne et pointe épicée",
@@ -347,6 +351,7 @@ const SPIRITS = [
     degree: "45°",
     badges: ["🇷🇪 La Réunion", "🛢️ 12 ans ex-Cognac", "🌡️ 45°"],
     art: "bottle",
+    img: "savana.png",
     bg: "linear-gradient(135deg,#2e1c0c,#6b3d14 55%,#180e04)",
     profile: [
       "<strong>Nez :</strong> fruits cuits, praliné, miel et pain d’épices",
@@ -369,6 +374,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇮🇪 Irlande", "🛢️ Fini en fûts de rhum", "🌺 Floral & malté"],
     art: "bottle",
+    img: "bushmill.png",
     bg: "linear-gradient(135deg,#1c2a1c,#3d5a2e 60%,#0e180c)",
     profile: [
       "<strong>Nez :</strong> floral, vanille et caramel",
@@ -391,6 +397,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇹🇭 Thaïlande", "🛢️ 7 à 12 ans", "🥇 Multi-médaillé"],
     art: "bottle",
+    img: "phraya.png",
     bg: "linear-gradient(135deg,#4a2e0c,#b87a1e 55%,#241404)",
     profile: [
       "<strong>Nez :</strong> vanille, miel, coco et raisins secs",
@@ -413,6 +420,7 @@ const SPIRITS = [
     degree: "40°",
     badges: ["🇬🇹 Guatemala", "🛢️ Solera 6-9 ans", "🍯 Miel & caramel"],
     art: "bottle",
+    img: "Botran.png",
     bg: "linear-gradient(135deg,#3a1e0e,#8a4a1a 55%,#1e0e04)",
     profile: [
       "<strong>Nez :</strong> miel, caramel, vanille et fruits confits",
